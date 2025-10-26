@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Supreme Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Simple styling for the thank-you message */
+        .thank-you {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #00bcd4; /* match your accent color */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,7 +38,7 @@
                 <h2 class="text-center">Get in Touch</h2>
                 <p class="text-center">Have questions or need a custom plan? Fill out the form below and we’ll get back to you promptly.</p>
 
-                <form class="contact-form" action="https://formspree.io/f/mqagaebb" method="POST">
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/mqagaebb" method="POST">
                     <div class="form-group">
                         <label for="company-name">Company Name</label>
                         <input type="text" id="company-name" name="company_name" placeholder="Enter your company name" required>
@@ -61,6 +71,8 @@
 
                     <button type="submit" class="cta-button">Submit</button>
                 </form>
+
+                <p class="thank-you" id="thankYouMessage">✅ Thanks! Your message has been sent. We’ll get back to you shortly.</p>
             </div>
         </section>
     </main>
@@ -70,6 +82,31 @@
             <p>&copy; 2025 Supreme Solutions. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript to show thank-you message without leaving the page
+        const form = document.getElementById('contactForm');
+        const thankYou = document.getElementById('thankYouMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // prevent default form submission
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = 'none'; // hide form
+                    thankYou.style.display = 'block'; // show thank-you message
+                } else {
+                    alert('Oops! There was a problem submitting your form.');
+                }
+            }).catch(error => {
+                alert('Oops! There was a problem submitting your form.');
+            });
+        });
+    </script>
 </body>
 </html>
-
