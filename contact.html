@@ -14,6 +14,14 @@
             font-size: 1.2em;
             color: #00bcd4; /* match your accent color */
         }
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .checkbox-group input {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -36,6 +44,8 @@
         <section class="contact">
             <div class="container">
                 <h2 class="text-center">Get in Touch</h2>
+                <p class="text-center">Have questions or need a custom plan? Fill out the form below and we’ll get back to you promptly.</p>
+
                 <form id="contactForm" class="contact-form" action="https://formspree.io/f/mqagaebb" method="POST">
                     <div class="form-group">
                         <label for="company-name">Company Name</label>
@@ -53,13 +63,18 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="services">Which services are you interested in?</label>
-                        <select id="services" name="services[]" multiple size="3" required>
-                            <option value="ai-helpdesk">AI Helpdesk / MSP Services</option>
-                            <option value="cybersecurity">Cybersecurity Consulting</option>
-                            <option value="custom-solutions">Custom IT Solutions</option>
-                        </select>
-                        <small>Hold Ctrl (Windows) or Cmd (Mac) to select multiple services.</small>
+                        <label>Which services are you interested in?</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="services[]" value="ai-helpdesk"> AI Helpdesk / MSP Services
+                            </label>
+                            <label>
+                                <input type="checkbox" name="services[]" value="cybersecurity"> Cybersecurity Consulting
+                            </label>
+                            <label>
+                                <input type="checkbox" name="services[]" value="custom-solutions"> Custom IT Solutions
+                            </label>
+                        </div>
                     </div>
 
                     <div class="form-group">
