@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Supreme Solutions</title>
+    <title>Contact Us - Supreme Solutions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
@@ -25,10 +25,10 @@
     <main>
         <section class="contact">
             <div class="container">
-                <h2>Get in Touch</h2>
-                <p>Ready to protect and streamline your business IT operations? Let’s talk about how Supreme Solutions can help. Fill out the form below, and we’ll get back to you within 24 hours.</p>
+                <h2 class="text-center">Get in Touch</h2>
+                <p class="text-center">Have questions or need a custom plan? Fill out the form below and we’ll get back to you promptly.</p>
 
-                <form class="contact-form" action="submit_contact_form.php" method="POST">
+                <form class="contact-form" action="https://formspree.io/f/mqagaebb" method="POST">
                     <div class="form-group">
                         <label for="company-name">Company Name</label>
                         <input type="text" id="company-name" name="company_name" placeholder="Enter your company name" required>
@@ -45,44 +45,29 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="services">Which service are you interested in?</label>
-                        <select id="services" name="services" required>
-                            <option value="" disabled selected>Select a service</option>
-                            <option value="it_support">AI-Powered IT Support</option>
-                            <option value="security_monitoring">Cybersecurity Monitoring</option>
-                            <option value="automation">Automation & Workflow Setup</option>
-                            <option value="consulting">Tech Consulting</option>
-		            <option value="Combination of Services">Combination of Services</option>
+                        <label for="services">Which services are you interested in?</label>
+                        <select id="services" name="services[]" multiple size="3" required>
+                            <option value="ai-helpdesk">AI Helpdesk / MSP Services</option>
+                            <option value="cybersecurity">Cybersecurity Consulting</option>
+                            <option value="custom-solutions">Custom IT Solutions</option>
                         </select>
+                        <small>Hold Ctrl (Windows) or Cmd (Mac) to select multiple services.</small>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Describe your issue or request..." rows="5" required></textarea>
+                        <textarea id="message" name="message" placeholder="Enter your message here" rows="5" required></textarea>
                     </div>
 
-                    <button type="submit" class="cta-button">Send Message</button>
+                    <button type="submit" class="cta-button">Submit</button>
                 </form>
-
-                <div class="contact-info">
-                    <h3>Business Hours</h3>
-                    <p>Monday – Friday: 9 AM – 6 PM<br>
-                       Saturday: By Appointment<br>
-                       Sunday: Closed</p>
-
-                    <h3>Email</h3>
-                    <p><a href="mailto:SupremeSolutionsTech@gmail.com">SupremeSolutionsTech@gmail.com</a></p>
-
-                    <h3>Phone</h3>
-                    <p>(336) 486-3985</p>
-                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Supreme Solutions. All Rights Reserved.</p>
+            <p>&copy; 2025 Supreme Solutions. All rights reserved.</p>
         </div>
     </footer>
 </body>
