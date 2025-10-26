@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing | Supreme Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #111;
+      border-bottom: 2px solid #00bcd4;
+    }
+
+    header h1 {
+      color: #00bcd4;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover, nav ul li a.active {
+      color: #00bcd4;
+    }
+
+    .pricing {
+      padding: 80px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #111, #000);
+    }
+
+    .pricing h2 {
+      font-size: 2.5em;
+      color: #00bcd4;
+      margin-bottom: 15px;
+    }
+
+    .pricing p {
+      color: #ccc;
+      margin-bottom: 50px;
+      font-size: 1.1em;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .plan {
+      background: #1a1a1a;
+      border: 1px solid #222;
+      border-radius: 15px;
+      padding: 40px 25px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .plan:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+    }
+
+    .plan.featured {
+      border: 2px solid #00bcd4;
+      background: linear-gradient(145deg, #0d0d0d, #111);
+      box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+    }
+
+    .plan h3 {
+      color: #00bcd4;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .plan .price {
+      font-size: 2em;
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .plan ul li {
+      border-bottom: 1px solid #222;
+      padding: 10px 0;
+      color: #ccc;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #00bcd4;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+    }
+
+    .cta-button:hover {
+      background: #0097a7;
+      transform: scale(1.05);
+    }
+
+    .note {
+      margin-top: 50px;
+      color: #aaa;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      color: #777;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Supreme Solutions</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html" class="active">Pricing</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pricing">
+      <div class="container">
+        <h2>Flexible Plans for Every Business</h2>
+        <p>Whether you’re just starting or managing multiple offices — we have a plan built for you.</p>
+
+        <div class="pricing-grid">
+          <div class="plan">
+            <h3>Starter</h3>
+            <p class="price">$99/month</p>
+            <ul>
+              <li>Up to 5 Devices</li>
+              <li>AI-Powered Helpdesk</li>
+              <li>Basic Threat Protection</li>
+              <li>Monthly System Checkups</li>
+            </ul>
+            <a href="contact.html" class="cta-button">Get Started</a>
+          </div>
+
+          <div class="plan featured">
+            <h3>Professional</h3>
+            <p class="price">$249/month</p>
+            <ul>
+              <li>Up to 15 Devices</li>
+              <li>24/7 Priority Support</li>
+              <li>Advanced Cyber Defense Suite</li>
+              <li>Automated Cloud Backups</li>
+              <li>Quarterly IT Strategy Review</li>
+            </ul>
+            <a href="contact.html" class="cta-button">Choose Pro</a>
+          </div>
+
+          <div class="plan">
+            <h3>Enterprise</h3>
+            <p class="price">Custom Quote</p>
+            <ul>
+              <li>Unlimited Devices</li>
+              <li>Dedicated IT Manager</li>
+              <li>Advanced Threat Intelligence</li>
+              <li>Onsite Support Available</li>
+              <li>Custom System Integration</li>
+            </ul>
+            <a href="contact.html" class="cta-button">Request Quote</a>
+          </div>
+        </div>
+
+        <div class="note">
+          <p>Need something unique? <a href="contact.html" style="color:#00bcd4;">Let’s build your perfect plan.</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Supreme Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
